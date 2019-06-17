@@ -13,18 +13,19 @@ import Typography from '@material-ui/core/Typography';
 
 const action = msg => () => console.log(msg);
 
-const styles = {
-  card: {
-    maxWidth: 800,
-    margin: 'auto',
-  },
-  media: {
-    height: 0,
-    paddingTop: '30%', // 16:9
-  },
-};
-
-const comp = ({ classes, variant }) => (
+const MaterialComponent = withStyles(
+  theme => ({
+    card: {
+      maxWidth: 800,
+      margin: 'auto',
+    },
+    media: {
+      height: 0,
+      paddingTop: '30%', // 16:9
+    },
+  }),
+  { withTheme: true }
+)(({ classes, variant }) => (
   <Card className={classes.card}>
     <CardMedia
       className={classes.media}
@@ -78,10 +79,9 @@ const comp = ({ classes, variant }) => (
       </Button>
     </CardActions>
   </Card>
-);
-const MaterialComponent = withStyles(styles)(comp);
+));
 
-storiesOf('Button', module)
+storiesOf('Index', module)
   .addDecorator(muiTheme())
   .add('Text Buttons', () => <MaterialComponent />)
   .add('Outlined Buttons', () => <MaterialComponent variant="outlined" />)

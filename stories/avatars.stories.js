@@ -6,33 +6,85 @@ import { withStyles } from '@material-ui/core/styles';
 
 import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar';
+import { deepOrange, deepPurple, pink, green } from '@material-ui/core/colors';
+
+import FolderIcon from '@material-ui/icons/Folder';
+import PageviewIcon from '@material-ui/icons/Pageview';
+import AssignmentIcon from '@material-ui/icons/Assignment';
 
 
 import imageFile from '../static/images/avatar/1.png';
 
-const action = msg => () => console.log(msg);
 
-const styles = {
+const DefaultAvatar = withStyles(
+  theme => ({
+    avatar: {
+      margin: 10,
+      width: 50,
+      height: 50,
+    },
+    bigAvatar: {
+      margin: 10,
+      width: 100,
+      height: 100,
+    },
+  }),
+  { withTheme: true }
+)(({ classes, variant }) => (
+  <Grid container justify="center" alignItems="center">
+    <Avatar key="1" alt="Jon Doe" src={imageFile} className={classes.avatar} />
+    <Avatar key="2" alt="Jon Doe" src={imageFile} className={classes.bigAvatar} />
+  </Grid>
+));
+
+
+const LetterAvatars = withStyles({
   avatar: {
     margin: 10,
-    width: 50,
-    height: 50,
   },
-  bigAvatar: {
+  orangeAvatar: {
     margin: 10,
-    width: 100,
-    height: 100,
+    color: '#fff',
+    backgroundColor: deepOrange[500],
   },
-};
-
-const comp = ({ classes, variant }) => (
+  purpleAvatar: {
+    margin: 10,
+    color: '#fff',
+    backgroundColor: deepPurple[500],
+  }
+})(({ classes }) => (
   <Grid container justify="center" alignItems="center">
-    <Avatar alt="Jon Doe" src={imageFile} className={classes.avatar} />
-    <Avatar alt="Jon Doe" src={imageFile} className={classes.bigAvatar} />
+    <Avatar key="1" className={classes.avatar}>H</Avatar>
+    <Avatar key="2" className={classes.orangeAvatar}>N</Avatar>
+    <Avatar key="3" className={classes.purpleAvatar}>OP</Avatar>
   </Grid>
-);
-const MaterialComponent = withStyles(styles)(comp);
+));
+
+
+const IconAvatars = withStyles({
+  avatar: {
+    margin: 10,
+  },
+  pinkAvatar: {
+    margin: 10,
+    color: '#fff',
+    backgroundColor: pink[500],
+  },
+  greenAvatar: {
+    margin: 10,
+    color: '#fff',
+    backgroundColor: green[500],
+  }
+})(({ classes }) => (
+  <Grid container justify="center" alignItems="center">
+    <Avatar key="1" className={classes.avatar}><FolderIcon /></Avatar>
+    <Avatar key="2" className={classes.pinkAvatar}><PageviewIcon /></Avatar>
+    <Avatar key="3" className={classes.greenAvatar}><AssignmentIcon /></Avatar>
+  </Grid>
+));
 
 storiesOf('Avatars', module)
   .addDecorator(muiTheme())
-  .add('default', () => <MaterialComponent />);
+  .add('Image', () => <DefaultAvatar />)
+  .add('Letters', () => <LetterAvatars />)
+  .add('Icon', () => <IconAvatars />);
