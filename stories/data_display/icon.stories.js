@@ -7,7 +7,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { red } from '@material-ui/core/colors';
 import Icon from '@material-ui/core/Icon';
 
-storiesOf('Icon', module)
+storiesOf('Data Display/Icons', module)
   .add('default', () => {
     return (
       <div>

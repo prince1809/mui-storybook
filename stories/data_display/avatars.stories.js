@@ -13,7 +13,7 @@ import PageviewIcon from '@material-ui/icons/Pageview';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 
 
-import imageFile from '../static/images/avatar/1.png';
+import imageFile from '../../static/images/avatar/1.png';
 
 
 const DefaultAvatar = withStyles(
@@ -83,7 +83,7 @@ const IconAvatars = withStyles({
   </Grid>
 ));
 
-storiesOf('Avatars', module)
+storiesOf('Data Display/Avatars', module)
   .addDecorator(muiTheme())
   .add('Image', () => <DefaultAvatar />)
   .add('Letters', () => <LetterAvatars />)
