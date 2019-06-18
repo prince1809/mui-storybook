@@ -4,12 +4,8 @@ import { storiesOf } from '@storybook/react';
 import { muiTheme } from 'storybook-addon-material-ui';
 import { withStyles } from '@material-ui/core';
 
-
-
 import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
 
-import MailIcon from '@material-ui/icons/Mail';
 
 const ContainedButtons = withStyles(
   theme => ({
