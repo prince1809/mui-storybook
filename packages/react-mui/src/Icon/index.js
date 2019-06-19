@@ -1,3 +1,1 @@
-export const styles = theme => ({
-
-})
+export { default } from './Icon';
