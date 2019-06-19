@@ -84,6 +84,6 @@ const DefaultCheckboxes = withStyles(
   );
 });
 
-storiesOf('Inputs/Checkboxes', module)
+storiesOf('Material/Inputs/Checkboxes', module)
   .addDecorator(muiTheme())
   .add('Default', () => <DefaultCheckboxes />);

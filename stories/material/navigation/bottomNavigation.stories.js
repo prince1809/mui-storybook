@@ -38,6 +38,6 @@ const DefaultBottomNavigation = withStyles(
   );
 });
 
-storiesOf('Navigation/Bottom', module)
+storiesOf('Material/Navigation/Bottom', module)
   .addDecorator(muiTheme())
   .add('Bottom', () => <DefaultBottomNavigation />);

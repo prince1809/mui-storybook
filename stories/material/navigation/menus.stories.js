@@ -47,6 +47,6 @@ const SimpleMenu = withStyles(
   );
 });
 
-storiesOf('Navigation/Menu', module)
+storiesOf('Material/Navigation/Menu', module)
   .addDecorator(muiTheme())
   .add('Simple', () => <SimpleMenu />);

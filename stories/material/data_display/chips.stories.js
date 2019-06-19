@@ -9,7 +9,7 @@ import { Avatar } from '@material-ui/core';
 import FaceIcon from '@material-ui/icons/Face';
 import DoneIcon from '@material-ui/icons/Done';
 
-import imageFile from '../../static/images/avatar/1.png';
+import imageFile from '../../../static/images/avatar/1.png';
 
 const DefaultChips = withStyles(
   theme => ({
@@ -105,6 +105,6 @@ const DefaultChips = withStyles(
   </div>
 ))
 
-storiesOf('Data Display/Chips', module)
+storiesOf('Material/Data Display/Chips', module)
   .addDecorator(muiTheme())
   .add('default', () => <DefaultChips />);

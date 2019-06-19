@@ -39,6 +39,6 @@ const SimpleBreadcrumbs = withStyles(
   </div>
 ));
 
-storiesOf('Navigation/Breadcrumbs', module)
+storiesOf('Material/Navigation/Breadcrumbs', module)
   .addDecorator(muiTheme())
   .add('Simple', () => <SimpleBreadcrumbs />)

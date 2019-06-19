@@ -36,6 +36,6 @@ const SimpleBadge = withStyles(
   </div>
 ));
 
-storiesOf('Data Display/Badge', module)
+storiesOf('Material/Data Display/Badge', module)
   .addDecorator(muiTheme())
   .add('Simple Badge', () => <SimpleBadge />);

@@ -50,6 +50,6 @@ const SimpleTabs = withStyles(
   );
 });
 
-storiesOf('Navigation/Tabs', module)
+storiesOf('Material/Navigation/Tabs', module)
   .addDecorator(muiTheme())
   .add('Simple', () => <SimpleTabs />);
